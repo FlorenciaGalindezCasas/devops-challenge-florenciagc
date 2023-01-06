@@ -1,0 +1,12 @@
+version: '2.13.0'
+
+services:
+  nginx-deploy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "nginx-1"
+    container_name: container-nginx
+    restart: always
+    ports:
+      - "8800:80"
