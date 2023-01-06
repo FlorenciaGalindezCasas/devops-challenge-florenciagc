@@ -1,0 +1,30 @@
+version: '2.13.0'
+
+services:
+  frontend:    
+    build:      
+      context: ./frontend/
+      dockerfile: Dockerfile
+    image: "reactjs-app-test-1"
+    container_name: container-frontend
+    restart: always    
+    ports:
+      - "3000:3000"
+    networks:
+      - WebApp
+  backend:
+    build:      
+      context: ./backend/
+      dockerfile: Dockerfile
+    image: "django-app-test-1"
+    container_name: container-backend  
+    
+    ports:
+      - "8000:8000"
+    networks:
+      - WebApp
+      
+networks:
+  WebApp:
+    name: networks_WebApp
+    driver: bridge
