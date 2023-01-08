@@ -34,7 +34,7 @@
 
   Segun la documentacion de AWS sobre redes y conectividad con internet, hay un recurso llamado INTERNET GATEWAY que permite configurar que las maquinas EC2 en dicha red publica puedan navegar por internet y conectarse con recursos externos.  
 
- **_______________________________________________________________________________________________________________________________________________________________________________________________________________**
+ **_______________________________________________________________________________________________________________________________________________________**
   ### **FUENTES**
 
   - [Estabilidad estática con zonas de disponibilidad](https://aws.amazon.com/es/builders-library/static-stability-using-availability-zones/)
