@@ -1,3 +1,4 @@
+# Version de Docker-compose
 version: '2.13.0'
 
 services:
@@ -6,19 +7,18 @@ services:
       context: ./frontend/
       dockerfile: Dockerfile
     image: "reactjs-app-test-1"
-    container_name: container-frontend
-    restart: always    
+    container_name: container-frontend  
     ports:
       - "3000:3000"
     networks:
       - WebApp
+
   backend:
     build:      
       context: ./backend/
       dockerfile: Dockerfile
     image: "django-app-test-1"
-    container_name: container-backend  
-    
+    container_name: container-backend      
     ports:
       - "8000:8000"
     networks:
